@@ -1,0 +1,4 @@
+exposure,min_pred_prob
+Never,0.0011
+Infrequent,0.0204
+Frequent,0.0003

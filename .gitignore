@@ -1,0 +1,34 @@
+# ============================================================================
+# Replication repository for the public-data ELSA reconstruction.
+# Only the analysis pipeline and its regenerable outputs are tracked; the
+# licensed source data and local working files are not.
+# ============================================================================
+
+# Track nothing by default — only the files explicitly re-included below.
+/*
+!/.gitignore
+!/README.md
+!/code/
+!/output/
+
+# code/: the numbered pipeline steps and the three figure scripts only.
+/code/*
+!/code/[0-9][0-9]_*.do
+!/code/make_dag.py
+!/code/make_flow_diagram.py
+!/code/make_undercount_figure.py
+
+# output/: the result tables and figures (logs are regenerable).
+/output/*
+!/output/tables/
+!/output/figures/
+
+# Never track licensed data, caches, or local binaries, wherever they appear.
+*.dta
+*.dct
+*.docx
+*.pyc
+__pycache__/
+.DS_Store
+*.swp
+*~

@@ -1,0 +1,4 @@
+truncation,HR,CI_low,CI_high,max_weight
+Untruncated,0.59,0.43,0.81,5.59
+1st/99th percentile (primary),0.59,0.43,0.80,1.57
+5th/95th percentile,0.57,0.42,0.78,1.23

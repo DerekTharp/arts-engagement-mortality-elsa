@@ -1,0 +1,12 @@
+covariate,smd_unweighted,smd_weighted,n_used
+any_mobil_tv,-0.589,-0.526,13695
+any_adl_tv,-0.531,-0.475,13695
+any_iadl_tv,-0.260,-0.230,13695
+cog_tv,0.747,0.693,13695
+cancre,0.012,0.022,13695
+lunge,-0.329,-0.333,13695
+cvd_any_tv,-0.267,-0.255,13695
+smoke_now_tv,-0.435,-0.416,13695
+cesd_w,-0.552,-0.469,13695
+poor_sight_tv,-0.373,-0.349,13695
+poor_hear_tv,-0.311,-0.286,13695

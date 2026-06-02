@@ -1,0 +1,10 @@
+From,To,N,Pct_of_from
+Never,Never,2472,74.4
+Never,Infrequent,762,22.9
+Never,Frequent,87,2.6
+Infrequent,Never,1038,11.4
+Infrequent,Infrequent,6559,72.2
+Infrequent,Frequent,1482,16.3
+Frequent,Never,100,1.4
+Frequent,Infrequent,1665,23.7
+Frequent,Frequent,5275,74.9
