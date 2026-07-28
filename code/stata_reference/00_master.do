@@ -1,5 +1,5 @@
 *==============================================================================
-* 00_master.do — 26.46 Arts Engagement Replication (BMJ)
+* 00_master.do — 26.46 Arts Engagement Replication (JECH)
 *
 * Reproduces Fancourt & Steptoe 2019 (BMJ 367:l6377) baseline Cox model and
 * extends it with time-varying exposure and marginal structural models.
@@ -7,7 +7,10 @@
 * To reproduce from scratch, set ONE path: edit `global proj` below to the
 * directory holding this project (the parent of code/, data/, output/, and the
 * ELSA data folder), then run:
-*     stata-mp -b do code/00_master.do
+*     stata-mp -b do code/stata_reference/00_master.do
+*
+* This is the validated historical reference. The production pipeline is
+* Python (`python3 code/run_all.py`).
 *==============================================================================
 
 clear all
@@ -45,18 +48,19 @@ if _rc {
 }
 
 *---- pipeline -----------------------------------------------------------------
-do "code/01_build_sample.do"
-do "code/02_cox_replication.do"
-do "code/03_build_panel.do"
-do "code/04_time_varying_cox.do"
-do "code/05_msm_iptw.do"
-do "code/06_tables.do"
-do "code/07_figures.do"
-do "code/08_pgs_sensitivity.do"
-do "code/09_death_undercount_sensitivity.do"
+do "code/stata_reference/01_build_sample.do"
+do "code/stata_reference/02_cox_replication.do"
+do "code/stata_reference/03_build_panel.do"
+do "code/stata_reference/04_time_varying_cox.do"
+do "code/stata_reference/05_msm_iptw.do"
+do "code/stata_reference/06_tables.do"
+do "code/stata_reference/07_figures.do"
+do "code/stata_reference/08_pgs_sensitivity.do"
+do "code/stata_reference/09_death_undercount_sensitivity.do"
 
-*---- regenerate DAG, STROBE flow, and undercount sensitivity figures (Python) -
+*---- regenerate DAG, balance love plot, STROBE flow, and undercount figures ---
 shell python3 "code/make_dag.py"
+shell python3 "code/make_balance_figure.py"
 shell python3 "code/make_flow_diagram.py"
 shell python3 "code/make_undercount_figure.py"
 

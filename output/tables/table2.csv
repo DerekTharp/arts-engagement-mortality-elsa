@@ -7,7 +7,7 @@ Baseline-fixed cloglog (panel),Infrequent,0.79,0.63,1.00,25262,472,HR
 Baseline-fixed cloglog (panel),Frequent,0.66,0.49,0.89,25262,472,HR
 Unweighted discrete-time PH,Infrequent,0.71,0.57,0.89,25262,472,HR
 Unweighted discrete-time PH,Frequent,0.54,0.40,0.74,25262,472,HR
-Naive confounder-adjusted PH,Infrequent,0.75,0.59,0.94,25262,472,HR
-Naive confounder-adjusted PH,Frequent,0.60,0.44,0.82,25262,472,HR
+Concurrent-confounder-adjusted PH,Infrequent,0.75,0.59,0.94,25262,472,HR
+Concurrent-confounder-adjusted PH,Frequent,0.60,0.44,0.82,25262,472,HR
 MSM IPTW+IPCW cloglog,Infrequent,0.72,0.57,0.90,25262,472,HR
 MSM IPTW+IPCW cloglog,Frequent,0.59,0.43,0.80,25262,472,HR

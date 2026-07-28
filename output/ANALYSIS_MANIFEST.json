@@ -1,0 +1,411 @@
+{
+  "checks": {
+    "counts": {
+      "baseline_deaths": 1022,
+      "baseline_n": 6055,
+      "panel_deaths": 472,
+      "panel_n": 25262,
+      "panel_pre_weight": 25495,
+      "pgs_deaths": 600,
+      "pgs_n": 4178
+    },
+    "document": {
+      "abstract_word_count": "240",
+      "display_count": "4",
+      "main_word_count": "2,080",
+      "reference_count": "12"
+    }
+  },
+  "inputs": [
+    {
+      "path": ".gitignore",
+      "sha256": "bf69f39f6bce58f792df3896d9fbe430c3cb43102c211fb2d77a0b764fb4b181",
+      "size_bytes": 1774
+    },
+    {
+      "path": "JECH submission/SUBMISSION_CHECKLIST.md",
+      "sha256": "ed0d802781fcb75bcaf447c01c787ca63db29e01121b276b1be71d759e4d4269",
+      "size_bytes": 4625
+    },
+    {
+      "path": "README.md",
+      "sha256": "79f5901e72e45f43bbe0ffc97b3c9bafdd02763ff5881db63bd4a824a31d46ba",
+      "size_bytes": 8899
+    },
+    {
+      "path": "code/01_build_sample.py",
+      "sha256": "ba09878601875f23bb09a9643fe36d6c679c66f7386e21f7bc0daf73b468c25c",
+      "size_bytes": 9107
+    },
+    {
+      "path": "code/02_cox_replication.py",
+      "sha256": "f8b76b754c7c3a10cf468089848341f6f14712328d35241ff002e3b7c03edbed",
+      "size_bytes": 1434
+    },
+    {
+      "path": "code/03_build_panel.py",
+      "sha256": "06704f4e556e6b5ae4daace897ce447985c060ad7ae3bb6d42342331b71f495c",
+      "size_bytes": 7372
+    },
+    {
+      "path": "code/04_time_varying_cox.py",
+      "sha256": "e527bf308fc0fe97354ebd8211631c6a28e8c7ab943524b1c193ae929fe23002",
+      "size_bytes": 1445
+    },
+    {
+      "path": "code/05_msm_iptw.py",
+      "sha256": "b7fb12c9258759bea834f97f5e47a737be95bf335c80cb61264e2dc61c1b5f32",
+      "size_bytes": 20848
+    },
+    {
+      "path": "code/06_tables.py",
+      "sha256": "191da3f761b67a808c14c63f206db234189163ae7d52f3944b75701b2c17f9b4",
+      "size_bytes": 4591
+    },
+    {
+      "path": "code/07_figures.py",
+      "sha256": "2da2f331be3c54781c015e72c92a5b1dd81cbe307a01b087299699a4950e7966",
+      "size_bytes": 2974
+    },
+    {
+      "path": "code/08_pgs_sensitivity.py",
+      "sha256": "50dbf043f62dcb10dbc6572f488e96865445ad761d26e553432577dacb8b6389",
+      "size_bytes": 5218
+    },
+    {
+      "path": "code/09_death_undercount_sensitivity.py",
+      "sha256": "bb651be04fa05b4bf17b8ca1498ffec2fc03fe4db35fe66f2714d1c28b92cb3d",
+      "size_bytes": 3982
+    },
+    {
+      "path": "code/build_manuscript.py",
+      "sha256": "446b361c81687c509d474aba58672af7ccfb2bd8e4dadbabc5bc55db58568872",
+      "size_bytes": 41030
+    },
+    {
+      "path": "code/build_submission_docx.py",
+      "sha256": "00653746d28733b69cec046df1ed8c949835d3f0c6d674bd80ba91c4f67b809a",
+      "size_bytes": 2590
+    },
+    {
+      "path": "code/check_reported_numbers.py",
+      "sha256": "d6a5e1868123becbfe51a22e96d88a2ae5c4ab001e776cf9f99dc0fd9d53d5a9",
+      "size_bytes": 50219
+    },
+    {
+      "path": "code/format_manuscript_docx.py",
+      "sha256": "c674c0e009abaece9e3523f2ce15b293899a67ecd56a97fb8f12657b81d6089d",
+      "size_bytes": 8220
+    },
+    {
+      "path": "code/make_balance_figure.py",
+      "sha256": "c506d6c16642ec5527016190ee727ded608f843d0f52cf7a185dfe501bb156a1",
+      "size_bytes": 5727
+    },
+    {
+      "path": "code/make_dag.py",
+      "sha256": "1c3c1afcc1f84d8c9ecee027e58377342c4ae1a31d55672d3415450eca9a0c58",
+      "size_bytes": 3266
+    },
+    {
+      "path": "code/make_flow_diagram.py",
+      "sha256": "96c491a6ab011789ba03a3e484460b95de21f8e136eb8ceb7058f88a8808762e",
+      "size_bytes": 5180
+    },
+    {
+      "path": "code/make_review_bundle.py",
+      "sha256": "01a05c8094c52402da6fddb155c51b0c787a23fd19db3f99e1eca1335f0c7f74",
+      "size_bytes": 12362
+    },
+    {
+      "path": "code/make_undercount_figure.py",
+      "sha256": "9ce3ff345991642f2085840073e8479969a6d58b009357732f105103d9dcb93b",
+      "size_bytes": 5211
+    },
+    {
+      "path": "code/pyelsa/__init__.py",
+      "sha256": "d1437bcb0241535cc3a18bbce101868f1c93ec5d653aa2a3f5ff3f256199e13c",
+      "size_bytes": 79
+    },
+    {
+      "path": "code/pyelsa/config.py",
+      "sha256": "f54634e495d7d357f57a48b0dc50f3a324ee19f3de81dfc9438eff20cc95362e",
+      "size_bytes": 4181
+    },
+    {
+      "path": "code/pyelsa/io.py",
+      "sha256": "eb9b6bec3f57684fe13ac4bcd58ebe83a8be160711e7161b90d42a1c5b55eae7",
+      "size_bytes": 3935
+    },
+    {
+      "path": "code/pyelsa/models.py",
+      "sha256": "3e9f76bf43683f0de89287f2d9b67520512d1d77e75dedcbd2fd40d72920399c",
+      "size_bytes": 15629
+    },
+    {
+      "path": "code/run_all.py",
+      "sha256": "082542e4c162595a12fec77be188f3a3f1e686b3caeaa8b8857592472e79f62c",
+      "size_bytes": 2978
+    },
+    {
+      "path": "code/validate.py",
+      "sha256": "f463f5aadc82607bf01ba4952f4677fe91742e09d18b338347086db919780713",
+      "size_bytes": 3757
+    },
+    {
+      "path": "manuscript/cover_letter_template.md",
+      "sha256": "ba107a2dc6221527526b011de4b0f289c651869c363c50152f48c596d773fa98",
+      "size_bytes": 4536
+    },
+    {
+      "path": "manuscript/manuscript_template.md",
+      "sha256": "93499cb8f3e7e922ebf3d91c1cced469a3d238bca751a080c1327c4bc077ccd6",
+      "size_bytes": 26589
+    },
+    {
+      "path": "manuscript/numeric_literals.tsv",
+      "sha256": "26d7c645fe4f9d02745475b9542bc52d91f8e4b53f59f81999042ea7bb3655ce",
+      "size_bytes": 12465
+    },
+    {
+      "path": "manuscript/postformat_docx.py",
+      "sha256": "c30aefb299233d4e468e2f56e37a32df66b9d76efc1e06438690e9ae9f54d161",
+      "size_bytes": 18339
+    },
+    {
+      "path": "manuscript/reporting_expectations.json",
+      "sha256": "422a0000fea7a65e02a3cad9746587259be980a4d791e416801724067683e922",
+      "size_bytes": 1151
+    },
+    {
+      "path": "manuscript/strobe_checklist_template.md",
+      "sha256": "9a1ee6a13f651043adf8f249db7e9723b687ba5831d8c19aad872f7682241ba1",
+      "size_bytes": 8764
+    },
+    {
+      "path": "manuscript/supplement_template.md",
+      "sha256": "5879185809650ba9d9636631aa24b3f81097b75e1ea5b892981e1228be6c37a8",
+      "size_bytes": 23919
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "2a8b177a3f9eb60ef07df1fe873631f50ad5a4e23772b952c9de2a0f3d67a011",
+      "size_bytes": 349
+    }
+  ],
+  "manifest_type": "analysis_reporting_bundle",
+  "outputs": [
+    {
+      "path": "data/arts_long.dta",
+      "sha256": "5310bbe83f5cbd9fdfb54f06687da50c9003db1d018ed3b38aa3f794e90346d5",
+      "size_bytes": 2054886
+    },
+    {
+      "path": "data/fancourt_baseline.dta",
+      "sha256": "ac0a101dc94117926764622f945b6511b1de0f8dbc226b8e5fb11188d7d05b86",
+      "size_bytes": 2269065
+    },
+    {
+      "path": "data/fancourt_panel.dta",
+      "sha256": "545d96b8625b0bac3d0d122c22fb92e79587107b7edfa3c31ebe08832fc645d7",
+      "size_bytes": 8780830
+    },
+    {
+      "path": "manuscript/cover_letter.md",
+      "sha256": "fe255efc78cf6ae23d25e363a1d80e794e977e0a69bd32009f404ac45f648ad3",
+      "size_bytes": 4331
+    },
+    {
+      "path": "manuscript/manuscript.md",
+      "sha256": "19ec97428f3b4f70a8cc6d60e84a69bf05dd0762253d523a56b8c36c4dc502e1",
+      "size_bytes": 26608
+    },
+    {
+      "path": "manuscript/strobe_checklist.md",
+      "sha256": "9c5e9e9132b0f69779d8a8d76b4c83b417881913a5030e89dcbd213823fc05a8",
+      "size_bytes": 8473
+    },
+    {
+      "path": "manuscript/supplement.md",
+      "sha256": "0400caca1ead0937478193ddbd0624d96a77bff886841345542a422534d3f585",
+      "size_bytes": 27707
+    },
+    {
+      "path": "output/figures/figure1_dag.png",
+      "sha256": "3bf1c88efa9ad9df839d0c7c8ff795a038da685fae4f2d55dfb1673f57f7569b",
+      "size_bytes": 108631
+    },
+    {
+      "path": "output/figures/figure2_balance_smd.png",
+      "sha256": "90626fe7916a7abb1236b5ab25203fbd8161315b05e6a96fe151cdcb35ff47ab",
+      "size_bytes": 325526
+    },
+    {
+      "path": "output/figures/figure_s1_flow.png",
+      "sha256": "a4ea71aec84f219bde8ce6791d7bb1b601f1af0bab23c0cde19e521fc7e58a48",
+      "size_bytes": 161719
+    },
+    {
+      "path": "output/figures/figure_s2_undercount_grid.png",
+      "sha256": "5dd3916ddc1025db5a8c03c19dd9cdc6a55a658587351c4966a3c6c0d36709de",
+      "size_bytes": 270839
+    },
+    {
+      "path": "output/figures/figure_s3_model_ladder.png",
+      "sha256": "5499e7b7aad2dc6b6a112101194d3d64a68117174f59d8b6028f0cc90a596ef8",
+      "size_bytes": 139987
+    },
+    {
+      "path": "output/tables/baseline_missingness.csv",
+      "sha256": "67c11ca7ea5aa286ae6a2d33674a8896b41bfcac31bba8ce44bb42472df706fa",
+      "size_bytes": 486
+    },
+    {
+      "path": "output/tables/death_undercount_sensitivity.csv",
+      "sha256": "031c373abba7f0bd7e48eaaaf9aee9426b4bb262e0194e4765bfec4ea69d0642",
+      "size_bytes": 11433
+    },
+    {
+      "path": "output/tables/positivity.csv",
+      "sha256": "2e7f30a66a02d8e792bb106c7894b7caf11a6aec3504b29192133a60bc740cf5",
+      "size_bytes": 70
+    },
+    {
+      "path": "output/tables/sensitivity_censoring.csv",
+      "sha256": "8e379ead578af76829e8fa16b2bc96a54fb40bbc141bbe11a30b286001c8f782",
+      "size_bytes": 306
+    },
+    {
+      "path": "output/tables/sensitivity_weights.csv",
+      "sha256": "a9a6d61f45617e725618a8ab5dd1ec0f3056cedf9ad27ddb3f2b5973d99a54b0",
+      "size_bytes": 162
+    },
+    {
+      "path": "output/tables/table1.csv",
+      "sha256": "7a284c1172b465de18da75e91bd44aba3bf0847e3353588da74bf1bab5222e31",
+      "size_bytes": 1714
+    },
+    {
+      "path": "output/tables/table2.csv",
+      "sha256": "aa40d385b55bb21020a90b1831afe50d89ee7f37b696206429e68ea01c570e11",
+      "size_bytes": 807
+    },
+    {
+      "path": "output/tables/table_pgs.csv",
+      "sha256": "c807d45528b40ba3227ca3795989ea71c853dcdc2c125456a8edfe50f5fe8f98",
+      "size_bytes": 972
+    },
+    {
+      "path": "output/tables/transitions.csv",
+      "sha256": "ce2fee846a2b7f7b25b6733779a10021ffc3ecd05dc3b426e00617cddc62f89e",
+      "size_bytes": 262
+    },
+    {
+      "path": "output/tables/weight_balance.csv",
+      "sha256": "af4ba2a24af06d432981e42bf123d207bb1c05a7d563f3f7f38916ee6713724e",
+      "size_bytes": 375
+    },
+    {
+      "path": "output/tables/weight_balance_stratified.csv",
+      "sha256": "45038090247b80648da4a24fb26d59bcf89a7a77667192d8b7e0b05b091a6c29",
+      "size_bytes": 7366
+    },
+    {
+      "path": "output/tables/weight_diagnostics.csv",
+      "sha256": "c4ec8ccfe9c04a071c1c10b68f3e168ea98117ed66b96f6fbbecaa07ecccb2f6",
+      "size_bytes": 234
+    }
+  ],
+  "producer": "code/run_all.py",
+  "raw_inputs": [
+    {
+      "mtime_ns": 1776098622240785241,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/elsa_endoflife_hcap2_w10.dta",
+      "sha256": "f43e5624ab789df1683d4239eb1bf6e2d7a31c3139069636a1220f4c53aace65",
+      "size_bytes": 477008
+    },
+    {
+      "mtime_ns": 1776098622821351767,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta",
+      "sha256": "915f0725c48439e604ebeeab45920d7f74640c68d8f863fc67d3220a19244824",
+      "size_bytes": 425676758
+    },
+    {
+      "mtime_ns": 1776098622321905375,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/h_elsa_eol_a2.dta",
+      "sha256": "09dc023fc9709429d797371b7829047ddece5e27269ac6d2a5f9a11b4e94c065",
+      "size_bytes": 401822
+    },
+    {
+      "mtime_ns": 1776098622320967078,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_10_elsa_data_eul_v4.dta",
+      "sha256": "2e5d84cea3e73fcce16dbce99dddcf0a5f8e928844861564b32980761aa0579f",
+      "size_bytes": 60019753
+    },
+    {
+      "mtime_ns": 1776098622860547304,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_2_core_data_v4.dta",
+      "sha256": "8dbaa9b17f0fc6aec6013d0b46f220e22b183617beee56f9df89f0dbaf26e134",
+      "size_bytes": 78744003
+    },
+    {
+      "mtime_ns": 1776098622174617529,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_3_elsa_data_v4.dta",
+      "sha256": "903b7233b6daffc136cf509123844a9888b7e0b9b7266a21ead8233210769d5e",
+      "size_bytes": 72063003
+    },
+    {
+      "mtime_ns": 1776098622415955186,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_4_elsa_data_v3.dta",
+      "sha256": "2c56406f1d7c57fef60942177764ff92dd8179a30895be7e06399f5d571b9819",
+      "size_bytes": 106739919
+    },
+    {
+      "mtime_ns": 1776098623022189856,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_5_elsa_data_v4.dta",
+      "sha256": "dffa3d399b8d566ac82f7fb35f7ce9dee542d1accb0e01b8f225514a7276d619",
+      "size_bytes": 72233035
+    },
+    {
+      "mtime_ns": 1776098621921294570,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_6_elsa_data_v2.dta",
+      "sha256": "0019282268626ad6e872affb1098e168179c595f5a5bf2da17bf4956a3cab3b0",
+      "size_bytes": 80626551
+    },
+    {
+      "mtime_ns": 1776098622125637770,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_7_elsa_data.dta",
+      "sha256": "9e2904c535dac478fcacb67aeb22decae618f2fca20cd02c5058cf96546b383d",
+      "size_bytes": 74048678
+    },
+    {
+      "mtime_ns": 1776098622563793421,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_8_elsa_data_eul_v2.dta",
+      "sha256": "a9e639f236a85bfb5eba5f9685b3e02b1e7e9069a98d8f650c5e6af61f06b7c4",
+      "size_bytes": 66178270
+    },
+    {
+      "mtime_ns": 1776098623055303335,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-5050-stata/stata/stata13_se/wave_9_elsa_data_eul_v2.dta",
+      "sha256": "ba48867de2458130180c0ad57085f7c1eee0601eb20432abb1d8b29b157aa9ce",
+      "size_bytes": 67481645
+    },
+    {
+      "mtime_ns": 1771007510000000000,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-8773-stata/UKDA-8773-stata/stata/stata13/list_pgs_scores_elsa_2022.dta",
+      "sha256": "59b84a6825308c3bf1762195161d38041fd398c6450b781915b1bfbcb66e2d81",
+      "size_bytes": 4902790
+    },
+    {
+      "mtime_ns": 1771007510000000000,
+      "path": "ELSA (English Longitudinal Study of Aging)/UKDA-8773-stata/UKDA-8773-stata/stata/stata13/principal_components_elsa_2022.dta",
+      "sha256": "5fb39a81647fa5d622ead38c0c983ffbe9b5bb88f5ae26df5b1a23eee1b06dd8",
+      "size_bytes": 318802
+    }
+  ],
+  "repository": {
+    "dirty": true,
+    "revision": "41ee29957a2d2b2cd2e31e6a67a8bf3dd560f004"
+  },
+  "schema_version": 2
+}

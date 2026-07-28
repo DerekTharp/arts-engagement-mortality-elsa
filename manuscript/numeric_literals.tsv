@@ -1,0 +1,115 @@
+path	token	count	class	source	note
+manuscript/cover_letter_template.md	0000	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/cover_letter_template.md	0002	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/cover_letter_template.md	1	1	STRUCTURAL	Editor response structure	Prior-exposure lag notation
+manuscript/cover_letter_template.md	2	2	STRUCTURAL	Editor response structure	Figure and table locators
+manuscript/cover_letter_template.md	2019	1	EXTERNAL	Fancourt and Steptoe JECH citation	Publication year
+manuscript/cover_letter_template.md	2026	3	ADMIN	JECH correspondence and manuscript record	Letter dates and manuscript identifier
+manuscript/cover_letter_template.md	226788	1	ADMIN	JECH manuscript record	Manuscript identifier
+manuscript/cover_letter_template.md	24	1	ADMIN	JECH editor letter	Invitation date
+manuscript/cover_letter_template.md	27	1	ADMIN	Cover-letter metadata	Submission date
+manuscript/cover_letter_template.md	2586	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/cover_letter_template.md	5973	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/cover_letter_template.md	73	1	EXTERNAL	Fancourt and Steptoe JECH citation	Journal volume
+manuscript/cover_letter_template.md	906	1	EXTERNAL	Fancourt and Steptoe JECH citation	First page
+manuscript/cover_letter_template.md	912	1	EXTERNAL	Fancourt and Steptoe JECH citation	Last page
+manuscript/cover_letter_template.md	one	2	STRUCTURAL	Editor response structure	Standalone clause and single-clause descriptions
+manuscript/cover_letter_template.md	three	1	STRUCTURAL	Editor response structure	Three motivating studies
+manuscript/cover_letter_template.md	two	1	STRUCTURAL	Editor response structure	Two balance display items
+manuscript/manuscript_template.md	0000	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/manuscript_template.md	0002	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/manuscript_template.md	01	1	ADMIN	ELSA ethics statement	MREC identifier segment
+manuscript/manuscript_template.md	1	10	STRUCTURAL	Analysis design and document structure	Wave, lag, figure, table, and model locators
+manuscript/manuscript_template.md	14	1	EXTERNAL	Fancourt and Steptoe BMJ 2019	Published follow-up duration
+manuscript/manuscript_template.md	1st	1	DESIGN	Weight-truncation protocol	Lower truncation percentile
+manuscript/manuscript_template.md	2	10	STRUCTURAL	Analysis design and document structure	Baseline wave, figure, table, section, and ethics locators
+manuscript/manuscript_template.md	2002	1	EXTERNAL	ELSA cohort documentation	Cohort start year
+manuscript/manuscript_template.md	2586	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/manuscript_template.md	5050	3	EXTERNAL	UK Data Service catalogue	Gateway Harmonized ELSA study identifier
+manuscript/manuscript_template.md	5973	1	ADMIN	Author ORCID	Identifier segment; not an analysis result
+manuscript/manuscript_template.md	8773	3	EXTERNAL	UK Data Service catalogue	ELSA polygenic-score study identifier
+manuscript/manuscript_template.md	91	1	ADMIN	ELSA ethics statement	MREC identifier segment
+manuscript/manuscript_template.md	99th	1	DESIGN	Weight-truncation protocol	Upper truncation percentile
+manuscript/manuscript_template.md	first	1	STRUCTURAL	Longitudinal design and narrative structure	First censoring event
+manuscript/manuscript_template.md	four	1	STRUCTURAL	Model-ladder design	Number of common-panel specifications discussed
+manuscript/manuscript_template.md	one	4	STRUCTURAL	Analysis design and narrative structure	Single baseline measure and worked-example wording
+manuscript/manuscript_template.md	third	1	EXTERNAL	Fancourt and Steptoe BMJ 2019	Approximate published mortality contrast
+manuscript/manuscript_template.md	three	1	STRUCTURAL	Exposure design	Exposure categories
+manuscript/manuscript_template.md	two	8	STRUCTURAL	Analysis design	Arts items, biennial timing, and display references
+manuscript/strobe_checklist_template.md	05	1	EXTERNAL	ELSA cohort documentation	Wave-2 baseline year suffix
+manuscript/strobe_checklist_template.md	1	5	STRUCTURAL	STROBE checklist and report structure	Checklist item, wave, figure, table, and section locators
+manuscript/strobe_checklist_template.md	10	4	STRUCTURAL	STROBE checklist and longitudinal design	Checklist item and wave locators
+manuscript/strobe_checklist_template.md	11	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	12	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	13	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	14	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	15	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	16	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	17	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	18	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	19	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	2	9	STRUCTURAL	STROBE checklist and analysis design	Checklist item, wave, figure, table, and section locators
+manuscript/strobe_checklist_template.md	20	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	2002	1	EXTERNAL	ELSA cohort documentation	Cohort start year
+manuscript/strobe_checklist_template.md	2004	1	EXTERNAL	ELSA cohort documentation	Wave-2 baseline year
+manuscript/strobe_checklist_template.md	21	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	22	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	3	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	4	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	5	2	STRUCTURAL	STROBE checklist and data coding	Checklist item and interview-status code
+manuscript/strobe_checklist_template.md	5050	1	EXTERNAL	UK Data Service catalogue	Gateway Harmonized ELSA study identifier
+manuscript/strobe_checklist_template.md	6	2	STRUCTURAL	STROBE checklist and data coding	Checklist item and interview-status code
+manuscript/strobe_checklist_template.md	7	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	8	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	8773	2	EXTERNAL	UK Data Service catalogue	ELSA polygenic-score study identifier
+manuscript/strobe_checklist_template.md	9	1	STRUCTURAL	STROBE checklist	Checklist item number
+manuscript/strobe_checklist_template.md	95%	1	DESIGN	Statistical reporting convention	Confidence-interval level
+manuscript/strobe_checklist_template.md	first	2	STRUCTURAL	Monotone-censoring design	First non-interview or incomplete wave
+manuscript/strobe_checklist_template.md	four	1	STRUCTURAL	Model-ladder design	Number of common-panel specifications
+manuscript/strobe_checklist_template.md	three	2	STRUCTURAL	Exposure and tutorial structure	Exposure categories and motivating studies
+manuscript/strobe_checklist_template.md	two	2	STRUCTURAL	Analysis design	Two-sided sensitivity and two auxiliary models
+manuscript/supplement_template.md	-1	1	DESIGN	ELSA harmonized-data codebook	Missing-value sentinel
+manuscript/supplement_template.md	-8	1	DESIGN	ELSA harmonized-data codebook	Missing-value sentinel
+manuscript/supplement_template.md	-9	1	DESIGN	ELSA harmonized-data codebook	Missing-value sentinel
+manuscript/supplement_template.md	0	2	DESIGN	Statistical and coding protocol	Standardisation centre and deterministic no-added-death scenario
+manuscript/supplement_template.md	0.5	1	DESIGN	Death-undercount sensitivity protocol	Allocation-risk grid level
+manuscript/supplement_template.md	01	1	STRUCTURAL	Pipeline script sequence	Baseline sample script identifier
+manuscript/supplement_template.md	02	1	STRUCTURAL	Pipeline script sequence	Baseline Cox script identifier
+manuscript/supplement_template.md	03	1	STRUCTURAL	Pipeline script sequence	Panel script identifier
+manuscript/supplement_template.md	04	1	STRUCTURAL	Pipeline script sequence	Time-varying Cox script identifier
+manuscript/supplement_template.md	05	3	STRUCTURAL	Pipeline and cohort structure	MSM script identifier and wave-year suffixes
+manuscript/supplement_template.md	06	1	STRUCTURAL	Pipeline script sequence	Table script identifier
+manuscript/supplement_template.md	08	1	STRUCTURAL	Pipeline script sequence	PGS script identifier
+manuscript/supplement_template.md	09	1	STRUCTURAL	Pipeline script sequence	Death-undercount script identifier
+manuscript/supplement_template.md	1	23	STRUCTURAL	Analysis protocol and supplement structure	Wave, section, figure, model, lag, and coding locators
+manuscript/supplement_template.md	1.0	3	DESIGN	Statistical reporting convention	Null HR and allocation-risk reference
+manuscript/supplement_template.md	10	6	STRUCTURAL	Longitudinal and supplement design	Wave, section, status, and script locators
+manuscript/supplement_template.md	11	1	STRUCTURAL	Longitudinal design	Endpoint wave beyond wave 10
+manuscript/supplement_template.md	13	1	DESIGN	ELSA variable definition	Alcohol-frequency category coding
+manuscript/supplement_template.md	14	1	EXTERNAL	Fancourt and Steptoe BMJ 2019	Published follow-up duration
+manuscript/supplement_template.md	16	1	DESIGN	ELSA variable definition	Cognition-item scoring range
+manuscript/supplement_template.md	18	1	DESIGN	ELSA variable definition	Alcohol-frequency category coding
+manuscript/supplement_template.md	1st	3	DESIGN	Weight diagnostic protocol	Lower truncation and percentile summaries
+manuscript/supplement_template.md	2	15	STRUCTURAL	Analysis protocol and supplement structure	Wave, section, figure, model, and power notation
+manuscript/supplement_template.md	2.5th	1	DESIGN	Simulation-summary protocol	Lower simulation percentile
+manuscript/supplement_template.md	2004	2	EXTERNAL	ELSA cohort documentation	Wave-2 baseline year
+manuscript/supplement_template.md	2013	1	EXTERNAL	ELSA end-of-life documentation	Data-series coverage year
+manuscript/supplement_template.md	2018	2	EXTERNAL	ELSA genetic-data documentation	PGS source/version year
+manuscript/supplement_template.md	3	4	STRUCTURAL	Analysis and supplement structure	Model/category/section locators
+manuscript/supplement_template.md	4	2	STRUCTURAL	ELSA status coding and supplement structure	Alive non-response code and section locator
+manuscript/supplement_template.md	5050	1	EXTERNAL	UK Data Service catalogue	Gateway Harmonized ELSA study identifier
+manuscript/supplement_template.md	5th	2	DESIGN	Weight diagnostic protocol	Weight and positivity percentile
+manuscript/supplement_template.md	6	3	STRUCTURAL	Document formatting	Supplementary figure width in inches
+manuscript/supplement_template.md	8	1	STRUCTURAL	Supplement structure	Supplement section locator
+manuscript/supplement_template.md	8773	1	EXTERNAL	UK Data Service catalogue	ELSA polygenic-score study identifier
+manuscript/supplement_template.md	9	3	STRUCTURAL	ELSA status coding and longitudinal design	Unknown-status code and wave locators
+manuscript/supplement_template.md	95%	3	DESIGN	Statistical reporting convention	Confidence-interval level
+manuscript/supplement_template.md	95th	2	DESIGN	Weight diagnostic protocol	Weight and positivity percentile
+manuscript/supplement_template.md	97.5th	1	DESIGN	Simulation-summary protocol	Upper simulation percentile
+manuscript/supplement_template.md	99th	3	DESIGN	Weight diagnostic protocol	Upper truncation and percentile summaries
+manuscript/supplement_template.md	first	3	STRUCTURAL	Monotone-censoring design	First unobserved/death-coded wave
+manuscript/supplement_template.md	four	1	STRUCTURAL	Model-ladder design	Number of panel models
+manuscript/supplement_template.md	one	1	STRUCTURAL	Longitudinal design	Single allowed terminal-wave exception
+manuscript/supplement_template.md	three	1	STRUCTURAL	Exposure design	Number of engagement categories
+manuscript/supplement_template.md	two	8	STRUCTURAL	Analysis design	Arts items, endpoints, models, directions, and RNGs
+manuscript/supplement_template.md	zero	1	DESIGN	PGS standardisation protocol	Mean-zero standardisation

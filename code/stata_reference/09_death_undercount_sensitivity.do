@@ -22,9 +22,8 @@
 *               never-engagement vs frequent-engagement; infrequent gets
 *               the geometric mean of the two endpoints. Values below 1
 *               place the unobserved deaths preferentially among frequent
-*               engagers (the direction that would attenuate the inverse
-*               association), so the grid is two-sided rather than testing
-*               only the conventionally raised never-engager concentration.
+*               engagers. Values above 1 preferentially allocate them among
+*               never engagers, so the grid covers both allocation patterns.
 *
 * For each of the 49 grid cells the script:
 *   1. Samples n_extra person-IDs from the currently never-observed-dead

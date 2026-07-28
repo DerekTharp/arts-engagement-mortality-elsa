@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "baseline": {
+    "n": 6055,
+    "deaths": 1022
+  },
+  "panel": {
+    "pre_weight_intervals": 25495,
+    "outcome_intervals": 25262,
+    "deaths": 472,
+    "missing_weights": 233
+  },
+  "time_varying_cox": {
+    "intervals": 25402,
+    "deaths": 474
+  },
+  "pgs": {
+    "n": 4178,
+    "deaths": 600
+  },
+  "table2_rows": 12,
+  "stratified_balance": {
+    "rows": 88,
+    "covariates": 11,
+    "strata": 4,
+    "contrasts": 2,
+    "cell_sizes": {
+      "pooled|freq_vs_never": [8570, 5125, 13695],
+      "pooled|infreq_vs_never": [11567, 5125, 16692],
+      "lag_never|freq_vs_never": [86, 2426, 2512],
+      "lag_never|infreq_vs_never": [753, 2426, 3179],
+      "lag_infrequent|freq_vs_never": [1465, 1028, 2493],
+      "lag_infrequent|infreq_vs_never": [6484, 1028, 7512],
+      "lag_frequent|freq_vs_never": [5220, 97, 5317],
+      "lag_frequent|infreq_vs_never": [1648, 97, 1745]
+    }
+  },
+  "death_undercount": {
+    "rows": 98,
+    "cells_per_exposure": 49,
+    "repetitions_per_cell": 200,
+    "n_extra_levels": 7,
+    "rr_alloc_levels": 7,
+    "exposures": 2,
+    "reported_allocation_levels": [0.5, 1.0, 3.0]
+  }
+}

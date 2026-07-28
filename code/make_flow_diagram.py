@@ -14,6 +14,7 @@ Output: output/figures/figure_s1_flow.png
 """
 
 import csv
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -21,7 +22,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 
-TABLES = Path(__file__).resolve().parent.parent / "output" / "tables"
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "code"))
+from pyelsa import config as C
+
+TABLES = ROOT / "output" / "tables"
+OUT = ROOT / "output" / "figures" / "figure_s1_flow.png"
 
 
 def _read_table2():
@@ -48,19 +54,20 @@ _, d_panel = t2["MSM IPTW+IPCW cloglog"]
 
 # --- content -----------------------------------------------------------------
 MAIN = [
-    "ELSA wave 2 (2004–05) respondents\naged 50 years or older",
+    f"ELSA wave 2 (2004–05) respondents\n"
+    f"aged {C.BASELINE_MIN_AGE} years or older",
     f"Baseline analytic sample (N = {n_baseline:,})\n"
     "Complete data on arts engagement and\nall baseline covariates",
     f"Baseline-fixed Cox model (full sample)\n"
     f"N = {n_baseline:,}; {d_baseline:,} deaths over follow-up\n"
-    "(Figure 2: “Baseline-fixed Cox”)",
+    "(main-text Table 1)",
     "Monotone-censored person-wave panel\n"
     "Intervals from wave 2 until the first non-interview\n"
     "or missing arts items; later waves censored",
     f"Person-wave intervals before weight exclusion\n{n_panel_pre:,} intervals",
     f"Outcome-model analytic sample\n"
     f"{n_outcome:,} person-wave intervals; {d_panel:,} deaths\n"
-    "(Figure 2: cloglog panel, discrete-time PH, MSM)",
+    "(main-text Table 1: common panel models)",
 ]
 # exclusion text keyed by the gap after main-box index i
 EXCL = {
@@ -138,7 +145,6 @@ ax.text(X, top_edge + 0.85, "Participant flow", ha="center", va="center",
 ax.set_xlim(X - W / 2 - 0.5, XCOL + WX / 2 + 0.5)
 ax.set_ylim(bot_edge - 0.5, top_edge + 1.5)
 
-plt.savefig("output/figures/figure_s1_flow.png",
-            dpi=200, bbox_inches="tight", facecolor="white")
+plt.savefig(OUT, dpi=200, bbox_inches="tight", facecolor="white")
 print(f"Flow diagram saved (N={n_baseline:,}; panel {n_outcome:,}; "
-      f"{d_panel:,} deaths) to output/figures/figure_s1_flow.png")
+      f"{d_panel:,} deaths) to {OUT.relative_to(ROOT)}")

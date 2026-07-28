@@ -1,12 +1,12 @@
-Model,Exposure,HR,CI_low,CI_high,N,Deaths,Note
-Cox (no PGS; genotyped),Infrequent,0.65,0.53,0.79,4178,600,Reference
-Cox (no PGS; genotyped),Frequent,0.57,0.44,0.73,4178,600,Reference
-Cox + PGS-education,Infrequent,0.64,0.52,0.78,4178,600,+ EA_3 + 10 PCs
-Cox + PGS-education,Frequent,0.56,0.43,0.72,4178,600,+ EA_3 + 10 PCs
-Cox + PGS-education/cognition/deprivation,Infrequent,0.64,0.52,0.78,4178,600,+ EA_3 + GC_2018 + SEC_DEP + 10 PCs
-Cox + PGS-education/cognition/deprivation,Frequent,0.56,0.43,0.72,4178,600,+ EA_3 + GC_2018 + SEC_DEP + 10 PCs
-PGS-education own effect,,1.08,0.99,1.18,4178,600,HR per SD
-PGS-education predicting arts engagement,,1.166,1.094,1.243,4178,,OR per SD (ordered logit; p=0.0000)
+Model,Exposure,HR,CI_low,CI_high,N,Deaths,P_value,Note
+Cox (no PGS; genotyped),Infrequent,0.65,0.53,0.79,4178,600,,Reference
+Cox (no PGS; genotyped),Frequent,0.57,0.44,0.73,4178,600,,Reference
+Cox + PGS-education,Infrequent,0.64,0.52,0.78,4178,600,,+ EA_3 + 10 PCs
+Cox + PGS-education,Frequent,0.56,0.43,0.72,4178,600,,+ EA_3 + 10 PCs
+Cox + PGS-education/cognition/deprivation,Infrequent,0.64,0.52,0.78,4178,600,,+ EA_3 + GC_2018 + SEC_DEP + 10 PCs
+Cox + PGS-education/cognition/deprivation,Frequent,0.56,0.43,0.72,4178,600,,+ EA_3 + GC_2018 + SEC_DEP + 10 PCs
+PGS-education own effect,,1.08,0.99,1.18,4178,600,,HR per SD
+PGS-education predicting arts engagement,,1.166,1.094,1.243,4178,,2.64009e-06,OR per SD (ordered logit)
 
 PGS-height negative control (arts predicting genetic height)
 Exposure,Coeff_SD,SE,P_value,Note

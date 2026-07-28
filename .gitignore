@@ -8,20 +8,45 @@
 /*
 !/.gitignore
 !/README.md
+!/requirements.txt
 !/code/
 !/output/
 
-# code/: the numbered pipeline steps and the three figure scripts only.
+# code/: the Python engine (canonical) is the numbered scripts, the pyelsa
+# package, the orchestrator, the validation harness, and the figure scripts.
+# The numbered .do files are retained as the Stata reference implementation.
 /code/*
-!/code/[0-9][0-9]_*.do
+!/code/pyelsa/
+!/code/[0-9][0-9]_*.py
+!/code/run_all.py
+!/code/validate.py
+!/code/build_manuscript.py
+!/code/build_submission_docx.py
+!/code/check_reported_numbers.py
 !/code/make_dag.py
+!/code/make_balance_figure.py
 !/code/make_flow_diagram.py
 !/code/make_undercount_figure.py
+!/code/stata_reference/
+!/code/stata_reference/*.do
 
 # output/: the result tables and figures (logs are regenerable).
 /output/*
 !/output/tables/
 !/output/figures/
+!/output/ANALYSIS_MANIFEST.json
+
+# Reporting sources and reviewed numeric contracts are versioned. Rendered
+# Markdown, PDFs, and Word files remain regenerable local artifacts.
+!/manuscript/
+/manuscript/*
+!/manuscript/manuscript_template.md
+!/manuscript/supplement_template.md
+!/manuscript/strobe_checklist_template.md
+!/manuscript/cover_letter_template.md
+!/manuscript/reporting_expectations.json
+!/manuscript/numeric_literals.tsv
+!/manuscript/postformat_docx.py
 
 # Never track licensed data, caches, or local binaries, wherever they appear.
 *.dta

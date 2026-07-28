@@ -349,15 +349,13 @@ local n_uwt = e(N)
 quietly count if died_in_interval == 1 & e(sample)
 local d_uwt = r(N)
 
-* --- (b2) Naïve confounder-adjusted discrete-time PH (cloglog) ---
+* --- (b2) Concurrent-confounder-adjusted discrete-time PH (cloglog) ---
 * Same cohort, same time-varying exposure, but conditioning DIRECTLY on
 * concurrent time-varying L_t in the outcome model rather than handling
-* L_t through inverse-probability weights. Under the DAG, this opens a
-* non-causal path through L_t as a collider (L_t is affected by A_{t-1}
-* and predicts mortality), so this estimate is expected to be biased.
-* Reported as a contrast to the MSM to make the "what does the MSM buy?"
-* comparison empirically visible on the same panel.
-display _newline "=== (b2) Naïve confounder-adjusted PH (concurrent L_t in outcome model, unweighted) ==="
+* L_t through inverse-probability weights. Under the DAG, this may block an
+* earlier-exposure pathway or induce collider bias. It is reported as a
+* conventional comparison on the same panel.
+display _newline "=== (b2) Concurrent-confounder-adjusted PH (concurrent L_t in outcome model, unweighted) ==="
 cloglog died_in_interval ib0.arts3 c.agey##c.agey ///
     i.female i.white i.married i.edu4 i.wealth5 i.working ///
     i.poor_sight i.poor_hearing cesd i.r2psyche ///
@@ -399,11 +397,11 @@ local d_msm = r(N)
 
 * --- (c-sensitivity) Terminal-censoring robustness ---
 * A terminal censored interval contributes a no-death interval to the next
-* scheduled wave. For ~30% of these the next-wave harmonised status is iwstat==9
+* scheduled wave. For some of these the next-wave harmonised status is iwstat==9
 * (vital status unknown), so survival across that interval is assumed rather
 * than observed. Here we instead censor those persons at their last
-* known-alive interview (drop the interval) and refit the MSM, to confirm the
-* estimate does not depend on that coding choice.
+* known-alive interview (drop the interval) and refit the MSM to assess
+* sensitivity to that coding choice.
 display _newline "=== (c-sensitivity) MSM, unknown-status terminal intervals censored at last interview ==="
 count if in_outcome & censored_next == 1 & next_iwstat == 9
 local n_cens_unknown = r(N)
@@ -422,7 +420,7 @@ local n_sens = e(N)
 
 * --- (c-sensitivity 2) Weight-truncation robustness ---
 * Refit the MSM with untruncated weights and with 5th/95th-percentile
-* truncation, to confirm the estimate does not depend on the 1st/99th choice.
+* truncation to assess sensitivity to the 1st/99th choice.
 quietly summarize cum_weight if in_outcome
 local wtmax_t199 = string(r(max), "%6.2f")
 foreach wv in raw t595 {
@@ -443,8 +441,8 @@ foreach wv in raw t595 {
 
 * --- Positivity diagnostic ---
 * Minimum predicted probability of each exposure category from the denominator
-* treatment model. Probabilities bounded away from 0 support the positivity
-* assumption (every exposure level is possible given covariate history).
+* treatment model. These values describe empirical overlap; they do not by
+* themselves establish the positivity assumption.
 foreach k in 0 1 2 {
     quietly summarize denp_`k' if in_trt_sample, detail
     local minp_`k' = string(r(min), "%6.4f")
@@ -547,10 +545,10 @@ foreach lev in 1 2 {
     file write `fh' "Unweighted discrete-time PH,`explab',`or_uwt_`lev'',`ci_uwt_lo_`lev'',`ci_uwt_hi_`lev'',`n_uwt',`d_uwt',HR" _n
 }
 
-* (c2) Naïve confounder-adjusted discrete-time PH (concurrent L_t in outcome model)
+* (c2) Concurrent-confounder-adjusted discrete-time PH
 foreach lev in 1 2 {
     local explab = cond(`lev' == 1, "Infrequent", "Frequent")
-    file write `fh' "Naive confounder-adjusted PH,`explab',`or_naive_`lev'',`ci_naive_lo_`lev'',`ci_naive_hi_`lev'',`n_naive',`d_naive',HR" _n
+    file write `fh' "Concurrent-confounder-adjusted PH,`explab',`or_naive_`lev'',`ci_naive_lo_`lev'',`ci_naive_hi_`lev'',`n_naive',`d_naive',HR" _n
 }
 
 * (d) MSM IPTW + IPCW
@@ -678,6 +676,99 @@ foreach v of varlist any_mobil_tv any_adl_tv any_iadl_tv cog_tv ///
 }
 file close `fhb'
 display "Weight balance written to $out/tables/weight_balance.csv"
+
+*------------------------------------------------------------------------------
+* Covariate balance STRATIFIED BY PRIOR EXPOSURE (A_{t-1}).
+*
+* A stabilised time-varying weight is designed to remove the association
+* between current exposure A_t and concurrent confounders L_t conditional on
+* prior exposure A_{t-1} and the age/baseline variables in the numerator.
+* Raw SMDs are retained as descriptive audit fields. The primary adjusted SMDs
+* come from regressions of each L_t on current exposure, age, age squared, and
+* the full baseline covariate set, fitted within strata of A_{t-1}. This follows
+* Jackson's regression approach when baseline variables appear in both weight
+* models.
+*
+* Every SMD uses the pooled unweighted SD within the stratum and contrast.
+* Weighted regressions use the cumulative combined MSM weight. Two contrasts
+* are written: frequent (2) vs never (0) and infrequent (1) vs never (0).
+*------------------------------------------------------------------------------
+display _newline "=== Stratified covariate balance (by A_{t-1}) ==="
+tempname fhbs
+file open `fhbs' using "$out/tables/weight_balance_stratified.csv", write replace
+file write `fhbs' "stratum,contrast,covariate,smd_raw_unweighted,smd_raw_weighted," ///
+    "smd_adjusted_unweighted,smd_adjusted_weighted,n_hi,n_lo,n_adjusted" _n
+
+foreach s in -1 0 1 2 {
+    if `s' == -1 {
+        local sname "pooled"
+        local scond "in_outcome"
+    }
+    else {
+        local lname : word `=`s'+1' of never infrequent frequent
+        local sname "lag_`lname'"
+        local scond "in_outcome & arts3_lag == `s'"
+    }
+    foreach con in 2 1 {
+        if `con' == 2 local cname "freq_vs_never"
+        if `con' == 1 local cname "infreq_vs_never"
+        foreach v of varlist any_mobil_tv any_adl_tv any_iadl_tv cog_tv ///
+            cancre lunge cvd_any_tv smoke_now_tv cesd_w poor_sight_tv poor_hear_tv {
+
+            quietly summarize `v' if `scond' & arts3 == `con'
+            local m_hi  = r(mean)
+            local sd_hi = r(sd)
+            local n_hi  = r(N)
+            quietly summarize `v' if `scond' & arts3 == 0
+            local m_lo  = r(mean)
+            local sd_lo = r(sd)
+            local n_lo  = r(N)
+
+            local psd = sqrt(((`sd_hi')^2 + (`sd_lo')^2) / 2)
+            local smd_raw_u = .
+            local smd_raw_w = .
+            local smd_adj_u = .
+            local smd_adj_w = .
+            local n_adjusted = .
+            if `psd' > 0 & !missing(`psd') {
+                local smd_raw_u = (`m_hi' - `m_lo') / `psd'
+                quietly summarize `v' if `scond' & arts3 == `con' [aweight=cum_weight]
+                local mw_hi = r(mean)
+                quietly summarize `v' if `scond' & arts3 == 0 [aweight=cum_weight]
+                local mw_lo = r(mean)
+                local smd_raw_w = (`mw_hi' - `mw_lo') / `psd'
+
+                quietly regress `v' ib0.arts3 c.agey##c.agey ///
+                    i.female i.white i.married i.edu4 i.wealth5 i.working ///
+                    i.poor_sight i.poor_hearing cesd i.r2psyche ///
+                    i.r2cancre i.r2lunge i.cvd_any i.other_ltc ///
+                    i.smoke_now alcfreq i.any_mobil i.any_adl i.any_iadl cog_mean ///
+                    if `scond' & inlist(arts3, 0, `con')
+                local smd_adj_u = _b[`con'.arts3] / `psd'
+                local n_adjusted = e(N)
+
+                quietly regress `v' ib0.arts3 c.agey##c.agey ///
+                    i.female i.white i.married i.edu4 i.wealth5 i.working ///
+                    i.poor_sight i.poor_hearing cesd i.r2psyche ///
+                    i.r2cancre i.r2lunge i.cvd_any i.other_ltc ///
+                    i.smoke_now alcfreq i.any_mobil i.any_adl i.any_iadl cog_mean ///
+                    if `scond' & inlist(arts3, 0, `con') [aweight=cum_weight]
+                local smd_adj_w = _b[`con'.arts3] / `psd'
+                if e(N) != `n_adjusted' {
+                    display as error "Adjusted balance samples differ for `sname' `cname' `v'"
+                    exit 459
+                }
+            }
+            file write `fhbs' "`sname',`cname',`v'," ///
+                (string(`smd_raw_u', "%7.4f")) "," (string(`smd_raw_w', "%7.4f")) "," ///
+                (string(`smd_adj_u', "%7.4f")) "," (string(`smd_adj_w', "%7.4f")) "," ///
+                (string(`n_hi', "%9.0f")) "," (string(`n_lo', "%9.0f")) "," ///
+                (string(`n_adjusted', "%9.0f")) _n
+        }
+    }
+}
+file close `fhbs'
+display "Stratified balance written to $out/tables/weight_balance_stratified.csv"
 
 display _newline "=============================================="
 display "Fancourt 2019 published:"
