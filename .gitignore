@@ -1,0 +1,12 @@
+# Licensed source data, generated results, and local artefacts are not tracked.
+ELSA (English Longitudinal Study of Aging)/
+data/
+output/
+
+*.dta
+*.dct
+*.pyc
+__pycache__/
+.DS_Store
+*.swp
+*~

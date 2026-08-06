@@ -1,0 +1,8 @@
+# Python engine for the ELSA arts-engagement analysis.
+# Only the scientific-Python core is needed; no Stata, statsmodels, or lifelines.
+# Tested with the versions pinned below (Python 3.12-3.14). Minimums are set
+# conservatively; the pipeline uses only stable numpy/scipy/pandas/matplotlib API.
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.7
